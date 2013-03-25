@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<canvas id="game"></canvas>
+<script src="lib/seed.js" type="text/javascript"></script>
+<script src="lib/class.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var sprite = new J.Sprite({
+
+    });
+
+    var stage = new J.Stage({
+        fps: 60,
+        canvas: document.getElementById('game')
+    }).on({
+        'enterFrame': function(){
+
+        }
+    });
+    stage.addChild(sprite);
+</script>
+</body>
+</html>
