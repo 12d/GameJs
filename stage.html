@@ -4,10 +4,31 @@
     <title>uiiiiiii hhhuuu</title>
 </head>
 <body style="color:red">
-<canvas id="game"></canvas>
+<canvas id="game" width="1440" height="758"></canvas>
 <script src="lib/seed.js" type="text/javascript"></script>
 <script src="lib/class.js" type="text/javascript"></script>
+<script type="text/javascript" src="lib/display/displayobject.js"></script>
+<script type="text/javascript" src="lib/display/graphics.js"></script>
+<script type="text/javascript" src="lib/display/shape.js"></script>
+<script type="text/javascript" src="lib/display/container.js"></script>
+<script type="text/javascript" src="lib/stage.js"></script>
 <script type="text/javascript">
+    var stage = new J.Stage({
+        canvas: document.getElementById('game')
+    });
+
+
+   // stage.addChild(new J.Shape().drawRect(0,0,100,100));
+    var shape = new J.Shape({width:600, height:468});
+    shape.grapics.drawRect(0,0,100,100).
+            drawCircle(0,0,100);
+
+    stage.addChild(shape);
+   // stage.addChild(new J.Shape());
+   // stage.addChild(new J.Shape());
+    stage.update();
+</script>
+<!--<script type="text/javascript">
     var sprite = new J.Sprite({
 
     });
@@ -21,6 +42,6 @@
         }
     });
     stage.addChild(sprite);
-</script>
+</script>-->
 </body>
 </html>
