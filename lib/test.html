@@ -5,15 +5,16 @@
 </head>
 <body>
 <script type="text/javascript">
-    var Class = function(){
-        return function NewClass(){
-            console.log(this);
-        }
-    }
-    var A = new Class();
-    var a = new A();
-
-    shape.grapics.drawRect()
+    var re = /^test$/g;
+    var s = 'test';
+    console.log(re.test(s));
+    console.log(re.test(s));
+    console.log(re.test(s));
+    console.log(re.test(s));
+    console.log(re.test(s));
+    console.log(re.test(s));
+    console.log(re.test(s));
+    //alert([re.test(s), re.test(s), re.test(s),re.test(s), re.test(s), re.test(s)]);
 </script>
 </body>
 </html>

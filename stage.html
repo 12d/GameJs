@@ -11,6 +11,8 @@
 <script type="text/javascript" src="lib/display/graphics.js"></script>
 <script type="text/javascript" src="lib/display/shape.js"></script>
 <script type="text/javascript" src="lib/display/container.js"></script>
+<script type="text/javascript" src="lib/animate.js"></script>
+<script type="text/javascript" src="lib/display/container.js"></script>
 <script type="text/javascript" src="lib/stage.js"></script>
 <script type="text/javascript">
     var stage = new J.Stage({
@@ -20,8 +22,8 @@
 
    // stage.addChild(new J.Shape().drawRect(0,0,100,100));
     var shape = new J.Shape({width:600, height:468});
-    shape.grapics.drawRect(0,0,100,100).
-            drawCircle(0,0,100);
+    shape.grapics.drawRect(0, 0, 100, 100).
+            drawCircle(0, 0, 100);
 
     stage.addChild(shape);
    // stage.addChild(new J.Shape());
