@@ -25,12 +25,11 @@
         from: 100,
         to: 1350,
         duration: 2
-    }).start().on({
-                'tweenFinish': function(){
-
-                    console.log('tweenFinish');
-                }
-            });
+    }).on({
+        'tweenFinish': function(){
+            console.log('tweenFinish');
+        }
+    }).start();
 
    /* var tweenx = new J.Tween({
         target: bai,
