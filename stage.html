@@ -18,21 +18,31 @@
 <script type="text/javascript">
     var stage = new J.Stage({
         canvas: document.getElementById('game'),
-        fps: 25,
+        fps: 60,
         height:game.height,
         width: game.width
     }).play();
 
 
-   // stage.addChild(new J.Shape().drawRect(0,0,100,100));
-    var shape = new J.Shape({width:600, height:468});
+    var shape = new J.Shape({width:100, height:100});
     //shape.grapics.drawRect(0, 0, 100, 100).
-            shape.grapics.drawCircle(0, 0, 100);
+            shape.grapics.drawCircle(50, 50, 50);
 
+    var shape2 = new J.Shape({width:100, height:100});
+    shape2.grapics.drawRect(0, 0, 10, 10);
 
-    stage.addChild(shape);
+    stage.addChild(shape).addChild(shape2);
     var tween = new J.Tween({
-        duration: 1,              // tween duration
+        duration: 5,              // tween duration
+        property: 'y',               // property of target, need to animate
+        target: shape2,                 // target need to animate
+        from: 0,                    // start animation with property value specified
+        to: 400
+
+    }).start().on('tweenFinish', function (){console.log('tweenFinish')});
+
+    var tween2 = new J.Tween({
+        duration: 5,              // tween duration
         property: 'x',               // property of target, need to animate
         target: shape,                 // target need to animate
         from: 0,                    // start animation with property value specified
@@ -40,10 +50,12 @@
 
     }).start().on('tweenFinish', function (){console.log('tweenFinish')});
 
-    stage.on('enterFrame', function(){
-        //console.log('tick')
-        tween.trigger('tick');
-    });
+    stage.addTween(tween).addTween(tween2);
+//    stage.on('enterFrame', function(){
+//        console.log('tick')
+//        tween.trigger('tick');
+//        tween2.trigger('tick');
+//    });
    // stage.addChild(new J.Shape());
    // stage.addChild(new J.Shape());
     //stage.update();
