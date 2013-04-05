@@ -1,0 +1,10 @@
+<project name="test" default="hello">
+	<loadproperties srcfile="build.properties"/>
+	<!--<property name="version" value="0.0.1"/>-->
+	<target name="hello">
+		<echo>Hello World!</echo>
+	</target>
+	<target name="say" depends="hello">
+		<echo>copywrit${copyright};version is${version}</echo>
+	</target>
+</project>
