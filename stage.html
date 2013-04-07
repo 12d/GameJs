@@ -6,15 +6,17 @@
 <body style="color:red">
 <img id="img" src="walk.jpg"/>
 <canvas id="game" width="1200" height="708"></canvas>
-<script src="lib/seed.js" type="text/javascript"  ></script>
+<script src="lib/seed.js" type="text/javascript"></script>
 <script src="lib/class.js" type="text/javascript"></script>
+<script src="lib/event/event.js" type="text/javascript"></script>
+<script src="lib/event/mouse.js" type="text/javascript"></script>
 <script type="text/javascript" src="lib/display/displayobject.js"></script>
 <script type="text/javascript" src="lib/display/graphics.js"></script>
 <script type="text/javascript" src="lib/display/shape.js"></script>
 <script type="text/javascript" src="lib/display/container.js"></script>
-<script type="text/javascript" src="lib/animate.js"></script>
+<script type="text/javascript" src="lib/animate/animate.js"></script>
 <script type="text/javascript" src="lib/display/container.js"></script>
-<script type="text/javascript" src="lib/tween.js"></script>
+<script type="text/javascript" src="lib/animate/tween.js"></script>
 <script type="text/javascript" src="lib/display/movieclip.js"></script>
 <script type="text/javascript" src="lib/stage.js"></script>
 <script type="text/javascript">
@@ -36,7 +38,7 @@
     stage.addChild(shape).addChild(shape2);
     var tween = new J.Tween({
         duration: 10,              // tween duration
-        property: 'y',               // property of target, need to animate
+        property: 'x',               // property of target, need to animate
         target: shape2,                 // target need to animate
         from: 0,                    // start animation with property value specified
         to: 400
@@ -51,11 +53,15 @@
         frameWidth: 120,
         height: 255,
         width: 120,
+        isLoop: true,
         keyframes: [
             {from: 0, to: 5}
         ],
-        reduce: 3
-    }).play();
+        reduce: 2
+    }).play().on('finish', function(){
+                //this.stop();
+                //tween2.stop();
+            });
     var tween2 = new J.Tween({
         duration: 10,              // tween duration
         property: 'x',               // property of target, need to animate
@@ -74,29 +80,7 @@
     stage.addChild(land);
     stage.addChild(mc);
     stage.addTween(tween).addTween(tween2);
-//    stage.on('enterFrame', function(){
-//        console.log('tick')
-//        tween.trigger('tick');
-//        tween2.trigger('tick');
-//    });
-   // stage.addChild(new J.Shape());
-   // stage.addChild(new J.Shape());
-    //stage.update();
+
 </script>
-<!--<script type="text/javascript">
-    var sprite = new J.Sprite({
-
-    });
-
-    var stage = new J.Stage({
-        fps: 60,
-        canvas: document.getElementById('game')
-    }).on({
-        'enterFrame': function(){
-
-        }
-    });
-    stage.addChild(sprite);
-</script>-->
 </body>
 </html>
