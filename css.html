@@ -5,35 +5,42 @@
     <style type="text/css" id="mystyle">
 
     </style>
+    <style>
+        #test{
+            width:100px;
+            height:100px;
+            background: red;
+        }
+            /*
+            .move{
+                -webkit-animation: circle 1s infinite alternate;
+                animation: circle 1s infinite  alternate;
+            }
+             -webkit-keyframes{framename{ 0%{ 0px; } 100%{  100px; }  }}
+            @-webkit-keyframes circle{
+                100%{
+                    -webkit-border-radius: 50px;
+                }
+            }
+            @keyframes circle{
+                100%{
+                    border-radius: 50px;
+                }
+            }
+            */
+    </style>
 </head>
-<body> <div id="test"></div>
-<style>
-    #test{
-        width:100px;
-        height:100px;
-        background: red;
-        -webkit-animation: circle 1s infinite alternate;
-        animation: circle 1s infinite  alternate;
-    }
-    @-webkit-keyframes circle{
-        100%{
-            -webkit-border-radius: 50px;
-        }
-    }
-    @keyframes circle{
-        100%{
-            border-radius: 50px;
-        }
-    }
-</style>
+<body> <div id="test" class=""></div>
+
 <a href="#">red</a>
 <script src="lib/seed.js" type="text/javascript"></script>
 <script src="lib/class.js" type="text/javascript"></script>
 <script src="lib/event/event.js" type="text/javascript"></script>
 <script src="lib/css/style.js" type="text/javascript"></script>
+<script src="lib/animate/css3.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-    function insertRule(sheet, selectorText, cssText, position) {
+/*    function insertRule(sheet, selectorText, cssText, position) {
         if (sheet.insertRule) {
             sheet.insertRule(selectorText + "{" + cssText + "}", position);
         } else if (sheet.addRule) {
@@ -43,7 +50,8 @@
     insertRule(document.styleSheets[0], "body", "background-color: silver", 0);
     function a () {
 
-    }
+    }*/
+
 </script>
 </body>
 </html>
