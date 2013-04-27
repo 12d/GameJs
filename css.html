@@ -2,35 +2,49 @@
 <html>
 <head>
     <title></title>
-    <style type="text/css" id="mystyle">
-
-    </style>
     <style>
-        #test{
+        .test{
             width:100px;
             height:100px;
             background: red;
         }
-            /*
             .move{
-                -webkit-animation: circle 1s infinite alternate;
-                animation: circle 1s infinite  alternate;
+                width:100px;
+                height:100px;
+                background: red;
+                -webkit-animation: circle 10000ms ease-in-out 1000ms 1, rotate 1000ms 1;
+
+                /*animation: circle 1000ms infinite  alternate;*/
             }
-             -webkit-keyframes{framename{ 0%{ 0px; } 100%{  100px; }  }}
+
             @-webkit-keyframes circle{
                 100%{
                     -webkit-border-radius: 50px;
                 }
+            }
+            @-webkit-keyframes bg{
+                100%{
+                    background: blue;
+                }
+                50% {
+                    background: green;
+                }
+
+            }
+            @-webkit-keyframes rotate{
+                100%{
+                    -webkit-transform:rotate(360deg);
+                }
+
             }
             @keyframes circle{
                 100%{
                     border-radius: 50px;
                 }
             }
-            */
     </style>
 </head>
-<body> <div id="test" class=""></div>
+<body> <div id="test2" class="test"></div>
 
 <a href="#">red</a>
 <script src="lib/seed.js" type="text/javascript"></script>
