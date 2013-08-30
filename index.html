@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<div id="box" style="width:10px;height: 10px;position: absolute;background: #000;"></div>
+<script src="lib/seed.js" type="text/javascript"></script>
+<script src="lib/class.js" type="text/javascript"></script>
+<script src="lib/event/event.js" type="text/javascript"></script>
+<script src="lib/animate/ease.js" type="text/javascript"></script>
+<script src="lib/animate/animate.js" type="text/javascript"></script>
+<script src="lib/animate/timeline.js" type="text/javascript"></script>
+
+<script src="lib/animate/tween.js" type="text/javascript"></script>
+<script type="text/javascript">
+    a = new J.Tween({
+        target: document.getElementById('box'),
+        from: 0,
+        to: 100,
+        fps: 60,
+        easing: 'Bounce.easeOut',
+        property: 'height',
+        duration: 1
+    }).play();
+    a = new J.Tween({
+        target: document.getElementById('box'),
+        from: 0,
+        to: 100,
+        fps: 60,
+        easing: 'Bounce.easeOut',
+        property: 'width',
+        duration: 1
+    }).play();
+</script>
+</body>
+</html>
